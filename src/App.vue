@@ -1,36 +1,100 @@
 <script setup>
-import Dashboard from './components/view/Dashboard.vue';
 </script>
 
 <template>
-  <Dashboard/>
+  <v-app>
+
+    <v-app-bar elevation="4" color="primary" dark class="pa-0">
+      <v-app-bar-title class="pa-4">Rapid Claim System</v-app-bar-title>
+      <div class="flex-grow-1 top-menu-bar">
+      <v-btn
+        spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/"
+        variant="text"
+      >
+        Dashboard
+      </v-btn>
+
+      <v-btn
+      spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/claims"
+        variant="text"
+      >
+        Claim Inbox
+      </v-btn>
+
+      <v-btn
+      spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/payments"
+        variant="text"
+      >
+        Payments
+      </v-btn>
+
+      <v-btn
+      spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/customers"
+        variant="text"
+      >
+        Customers
+      </v-btn>
+
+      <v-btn
+        spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/reports"
+        variant="text"
+      >
+        Reports
+      </v-btn>
+      <v-btn
+        spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/reports"
+        variant="text"
+      >
+        Allocate Claims
+      </v-btn>
+      <v-btn
+        spaced="end"
+        color="#FFFFFF"
+        class="text-decoration-none"
+        to="/reports"
+        variant="text"
+      >
+        Reuest Hub
+      </v-btn>
+      </div>
+    </v-app-bar>
+
+    <v-main>
+      <router-view />
+    </v-main>
+
+  </v-app>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+
+.text-decoration-none{
+  padding: 10px;
 }
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.top-menu-bar{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 10px;
+    gap: 10px;
+    color: white;
 }
 </style>
